@@ -4,7 +4,19 @@
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello, World!");
+            string[] Cibipreferiti = {
+                "Pizza Margherita",
+                "Lasagne",
+                "Pasta al pesto",
+                "Sushi",
+                "Gelato alla stracciatella",
+                "Insalata di quinoa",
+                "Pollo al curry",
+                "Tiramisù",
+                "Ramen",
+                "Tacos" 
+             };
+            Console.WriteLine($"la classifica è lunga {Cibipreferiti.Length}");
         }
     }
 }
