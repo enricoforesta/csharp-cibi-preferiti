@@ -1,5 +1,4 @@
-﻿using static System.Runtime.InteropServices.JavaScript.JSType;
-namespace csharp_cibi_preferiti
+﻿namespace csharp_cibi_preferiti
 {
     internal class Program
     {
@@ -43,7 +42,7 @@ namespace csharp_cibi_preferiti
             }
             else
             {
-                // Se il numero di elementi nella classifica è dispari, stampa solo l'elemento al centro
+                // Se la lunghezza è dispari, stampa solo l'elemento al centro
                 int centroIndex = cibiPreferiti.Length / 2;
                 Console.WriteLine($"Cibo di mezza classifica: {cibiPreferiti[centroIndex]}");
             }
