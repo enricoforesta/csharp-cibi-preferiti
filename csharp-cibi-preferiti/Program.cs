@@ -17,6 +17,12 @@
                 "Tacos" 
              };
             Console.WriteLine($"la classifica è lunga {Cibipreferiti.Length}");
+            for( int i = 0; i < Cibipreferiti.Length; i++ )
+            {
+                Console.WriteLine($"{i+1} - {Cibipreferiti[i]}");
+            }
+            Console.WriteLine($"Cibo preferito - {Cibipreferiti[0]}");
+            Console.WriteLine($"Cibo poco preferito - {Cibipreferiti[Cibipreferiti.Length - 1]}");
         }
     }
 }
