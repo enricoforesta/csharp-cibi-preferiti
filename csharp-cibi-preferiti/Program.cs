@@ -17,34 +17,50 @@
                 "Ramen",
                 "Tacos"
              };
-
-            // Stampa Lunghezza
-            Console.WriteLine($"La classifica è lunga {cibiPreferiti.Length}");
-
-            // Stampa Classifica
-            for (int i = 0; i < cibiPreferiti.Length; i++)
+            if (cibiPreferiti.Length > 0)
             {
-                Console.WriteLine($"{i + 1} - {cibiPreferiti[i]}");
-            }
+                // Stampa Lunghezza
+                Console.WriteLine($"La classifica è lunga {cibiPreferiti.Length}");
 
-            // Stampa Top
-            Console.WriteLine($"Cibo preferito - {cibiPreferiti[0]}");
+                // Stampa Classifica
+                for (int i = 0; i < cibiPreferiti.Length; i++)
+                {
+                    Console.WriteLine($"{i + 1} - {cibiPreferiti[i]}");
+                }
 
-            // Stampa Coda
-            Console.WriteLine($"Cibo poco preferito - {cibiPreferiti[cibiPreferiti.Length - 1]}");
+                /* Stampa classifica alternativa
+                 int posizione = 0;
+                foreach (string cibo in  cibiPreferiti)
+                {
 
-            if (cibiPreferiti.Length % 2 == 0)
-            {
-                // Se la lunghezza è pari, stampa i due elementi al centro
-                int centroIndex1 = cibiPreferiti.Length / 2 - 1;
-                int centroIndex2 = cibiPreferiti.Length / 2;
-                Console.WriteLine($"Cibo di mezza classifica: {cibiPreferiti[centroIndex1]} e {cibiPreferiti[centroIndex2]}");
+                    Console.WriteLine($"{posizione+1} - {cibo}");
+                    posizione++;
+                } 
+                */
+
+                // Stampa Top
+                Console.WriteLine($"Cibo preferito - {cibiPreferiti[0]}");
+
+                // Stampa Coda
+                Console.WriteLine($"Cibo poco preferito - {cibiPreferiti[cibiPreferiti.Length - 1]}");
+
+                if (cibiPreferiti.Length % 2 == 0)
+                {
+                    // Se la lunghezza è pari, stampa i due elementi al centro
+                    int centroIndex1 = cibiPreferiti.Length / 2 - 1;
+                    int centroIndex2 = cibiPreferiti.Length / 2;
+                    Console.WriteLine($"Cibo di mezza classifica: {cibiPreferiti[centroIndex1]} e {cibiPreferiti[centroIndex2]}");
+                }
+                else
+                {
+                    // Se la lunghezza è dispari, stampa solo l'elemento al centro
+                    int centroIndex = cibiPreferiti.Length / 2;
+                    Console.WriteLine($"Cibo di mezza classifica: {cibiPreferiti[centroIndex]}");
+                }
             }
             else
             {
-                // Se la lunghezza è dispari, stampa solo l'elemento al centro
-                int centroIndex = cibiPreferiti.Length / 2;
-                Console.WriteLine($"Cibo di mezza classifica: {cibiPreferiti[centroIndex]}");
+                Console.WriteLine("Non hai cibi preferiti!");
             }
         }
     }
